@@ -12,20 +12,20 @@ from .models import Profile
 @transaction.atomic
 def update_profile(request):
     if request.method == 'POST':
-        user_form = UserForm(request.POST, instance=request.user)
+        #user_form = UserForm(request.POST, instance=request.user)
         profile_form = ProfileForm(request.POST, instance=request.user.profile)
-        if user_form.is_valid() and profile_form.is_valid():
-            user_form.save()
+        if profile_form.is_valid():
+            #user_form.save()
             profile_form.save()
             messages.success(request, 'Your profile was successfully updated!')
             return redirect('users')
         else:
             messages.error(request, 'Please correct the error below.')
     else:
-        user_form = UserForm(instance=request.user)
+        #user_form = UserForm(instance=request.user)
         profile_form = ProfileForm(instance=request.user.profile)
     return render(request, 'profile/update_profile.html', {
-        'user_form': user_form,
+        #'user_form': user_form,
         'profile_form': profile_form
     })
 
@@ -35,7 +35,7 @@ def signup(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
+            raw_password = form.cleaned_data.get('password 1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
             return redirect('update_profile')
