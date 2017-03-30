@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<!--
+<form method="post">
+  {% csrf_token %}
+  {{ user_form.as_p }}
+  {{ profile_form.as_p }}
+  <button type="submit">Save changes</button>
+</form>
+
+-->
+
+{% block content %}
+
+{% for user in users %}
+
+    <div>
+        <h4>{{ user.first_name }} {{ user.last_name }}</h4>
+        <ul>
+        	<li><strong>About:</strong> {{ user.bio }}</li>
+        	<li><strong>School:</strong> {{ user.school }} </li>
+        </ul>
+        <br>
+    </div>
+
+{% endfor %}
+
+{% endblock %}
