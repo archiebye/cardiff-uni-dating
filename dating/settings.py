@@ -25,7 +25,7 @@ SECRET_KEY = 'ri8t28h@*nq4a*dau4tkdrq&8!cnrguq%sxwi9xlp-#c=qvt$0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 ALLOWED_DOMAINS = ['cardiff.ac.uk', 'cf.ac.uk']
 
