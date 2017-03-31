@@ -10,9 +10,9 @@ class Profile(models.Model):
     first_name = models.CharField(max_length=10, blank=True)
     last_name = models.CharField(max_length=15, blank=True)
     bio = models.TextField(max_length=500, blank=True)
-    school = models.CharField(max_length=15, choices=SCHOOL_CHOICES, default=1)
+    school = models.CharField(max_length=30, choices=SCHOOL_CHOICES, default='1')
     birth_date = models.DateField(null=True, blank=True)
-    gender = models.CharField(max_length=2, choices=GENDER_CHOICES, default=1)
+    gender = models.CharField(max_length=2, choices=GENDER_CHOICES, default='1')
 
     def is_male(self):
     	if self.gender == '1':
