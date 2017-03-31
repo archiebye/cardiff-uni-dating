@@ -31,6 +31,8 @@ ALLOWED_DOMAINS = ['cardiff.ac.uk', 'cf.ac.uk']
 
 LOGIN_REDIRECT_URL = '/update_profile/'
 
+DATE_INPUT_FORMATS = ('%d/%m/%Y')
+
 
 # Application definition
 
