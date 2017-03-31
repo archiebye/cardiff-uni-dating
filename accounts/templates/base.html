@@ -3,18 +3,18 @@
 <html>
     <head>
         <title>Cardiff Uni Dating</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <!--<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
+        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Montserrat|Ubuntu" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
     </head>
 
     <body>
-    	<div class="page-header">
+    	<div id=header class="page-header">
             {% if user.is_authenticated %}
-        	    <h1 style="margin:40px"><a href="/users">Cardiff Uni Dating</a></h1>
+        	    <h1 id=logo><a href="/users">Cardiff Uni Dating</a></h1>
             {% else %}
-                <h1 style="margin:40px"><a href="/">Cardiff Uni Dating</a></h1>
+                <h1 id=logo><a href="/">Cardiff Uni Dating</a></h1>
             {% endif %}
 
             {% if user.is_authenticated %}

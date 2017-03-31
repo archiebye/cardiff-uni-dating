@@ -1,0 +1,43 @@
+#logo a:link {
+    color: #e84343;
+    text-decoration: none;
+}
+
+#logo a:visited {
+    color: #e84343;
+    text-decoration: none;
+}
+
+#logo a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+#logo a:active {
+    color: #e84343;
+    text-decoration: none;
+}
+
+#logo {
+    text-align: center;
+    font-family: 'Amatic SC';
+    font-size: 65px;
+}
+
+body{
+	margin: 50px;
+    font-family: 'Montserrat';
+    font-weight:500;
+    line-height:26px;
+    font-size: 14px;
+    background:#ecf0f1;
+}
+p{
+	font-family: 'Ubuntu';
+}
+/*
+.page-header{
+    background:#ecf0f1;
+}
+*/
+
