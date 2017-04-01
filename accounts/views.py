@@ -67,11 +67,11 @@ def userlist(request):
     #return render(request, 'blog/post_list.html', {'posts': posts})
     if request.user.profile.is_male():
 
-        users = Profile.objects.filter(gender__icontains='f')
+        users = Profile.objects.filter(gender__icontains='2')
         return render(request, 'profile/profile.html', {'users': users})
 
     else:
-        users = Profile.objects.filter(gender__icontains='m')
+        users = Profile.objects.filter(gender__icontains='1')
         return render(request, 'profile/profile.html', {'users': users})
 
 @login_required
