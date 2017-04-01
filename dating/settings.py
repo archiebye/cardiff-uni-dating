@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 ALLOWED_DOMAINS = ['cardiff.ac.uk', 'cf.ac.uk']
 
-LOGIN_REDIRECT_URL = '/update_profile/'
+LOGIN_REDIRECT_URL = '/users/'
 
 DATE_INPUT_FORMATS = ('%d/%m/%Y')
 

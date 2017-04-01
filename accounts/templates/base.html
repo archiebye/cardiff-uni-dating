@@ -16,9 +16,10 @@
             {% else %}
                 <h1 id=logo><a href="/">Cardiff Uni Dating</a></h1>
             {% endif %}
-
+        </div>
+        <div id=options>
             {% if user.is_authenticated %}
-                <h4 style="margin:40px"><a href="/update_profile">Update Profile</a> | <a href="/signout">Sign Out</a></h4>
+                <h4><a href="/update_profile">Update Profile</a> | <a href="/signout">Sign Out</a></h4>
             {% endif %}
             
     	</div>

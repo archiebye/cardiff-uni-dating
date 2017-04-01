@@ -3,8 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from .choices import *
-import datetime
-
+from datetime import date
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -12,7 +11,7 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=15, blank=True)
     bio = models.TextField(max_length=500, blank=True)
     school = models.CharField(max_length=30, choices=SCHOOL_CHOICES, default='1')
-    birth_date = models.DateField(null=True, blank=True, default=datetime.date.today)
+    birth_date = models.DateField(null=True, blank=True, default=date.today)
     gender = models.CharField(max_length=2, choices=GENDER_CHOICES, default='1')
 
     def is_male(self):
